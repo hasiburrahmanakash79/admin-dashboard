@@ -106,9 +106,9 @@ const Dashboard = () => {
         >
           {isAdmin
             ? adminMenus.map((Menu, index) => (
-              <Link to={Menu.path}   key={index} className={`flex rounded-md p-2 cursor-pointer hover: hover:bg-white hover:text-black text-sm items-center gap-x-4 ${
+              <Link to={Menu.path}   key={index} className={`flex rounded-md p-2 cursor-pointer hover: hover:bg-blue-400 hover:text-black text-sm items-center gap-x-4 ${
                 Menu.gap ? 'mt-9' : 'mt-2'
-              } ${index === 0 && ' hover:bg-white'}`}>
+              } ${index === 0 && ' hover:bg-blue-400'}`}>
                 <li
              
              className='flex items-center gap-x-4'
@@ -133,7 +133,7 @@ const Dashboard = () => {
               userMenus.map((Menu, index) => (
                 <Link to={Menu.path} key={index} className={`flex rounded-md p-2 cursor-pointer hover: hover:bg-primary text-sm items-center gap-x-4 ${
                   Menu.gap ? 'mt-9' : 'mt-2'
-                } ${index === 0 && ' hover:bg-white'}`}>
+                } ${index === 0 && ' hover:bg-blue-400'}`}>
                 <li
                   
                   className='flex items-center gap-x-4'
@@ -154,7 +154,7 @@ const Dashboard = () => {
                 </Link>
               ))}
           {generalMenus.map((Menu, index) => (
-            <Link  to={Menu.path}  key={index} className={`flex rounded-md p-2 cursor-pointer hover: hover:bg-white  hover:text-black  text-sm items-center gap-x-4 ${
+            <Link  to={Menu.path}  key={index} className={`flex rounded-md p-2 cursor-pointer hover: hover:bg-blue-400  hover:text-black  text-sm items-center gap-x-4 ${
               Menu.gap ? 'mt-9' : 'mt-2'
             } ${index === 0 && ' hover:bg-primary'}`}>
             <li
