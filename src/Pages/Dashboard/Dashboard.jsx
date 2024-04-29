@@ -49,7 +49,7 @@ const Dashboard = () => {
       gap: true
     },
     {
-      title: 'Manage Users',
+      title: 'Users',
       path: '/dashboard/manageUsers',
       icon: iconMappings.Users,
       role: 'admin',
@@ -91,7 +91,7 @@ const Dashboard = () => {
       <div
         className={` ${
           open ? 'w-56 p-4' : 'w-14 text-center'
-        }   h-screen  fixed left-0 top-0 bottom-0 bg-black text-white z-50 pt-8  duration-500 transition-all`}
+        }   h-screen text-black fixed left-0 top-0 bottom-0 bg-blue-200 z-50 pt-8  duration-500 transition-all`}
       >
         <img
           src={arrow}
