@@ -182,7 +182,7 @@ const Dashboard = () => {
           isAdmin ? "" : ""
         }`}
       >
-        <div className="p-5 shadow flex justify-between items-center">
+        <div className="p-5 shadow-lg border-b flex justify-between items-center">
           <div className="flex gap-3 items-center">
             <FaMagnifyingGlass />
             <input type="text" placeholder="Type here" />
