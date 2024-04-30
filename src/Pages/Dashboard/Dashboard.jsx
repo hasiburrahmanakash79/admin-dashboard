@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { FaUser, FaHome, FaComment } from "react-icons/fa";
 import { AiFillNotification } from "react-icons/ai";
-import { FaImages } from "react-icons/fa6";
+import { FaImages, FaMagnifyingGlass } from "react-icons/fa6";
 import { MdHomeWork } from "react-icons/md";
 import { IconContext } from "react-icons";
 import arrow from "../../assets/arrow.png";
@@ -171,11 +171,17 @@ const Dashboard = () => {
       {/* Dashboard main content */}
       <div
         className={` ${
-          open ? "pl-60 pr-4" : "pl-16 pr-2"
+          open ? "pl-56" : "pl-14"
         }  flex-1  overflow-y-auto  duration-500 transition-all h-[100vh] ${
           isAdmin ? "" : ""
         }`}
       >
+        <div className="p-5 shadow">
+          <div className="flex gap-3 items-center">
+            <FaMagnifyingGlass/>
+            <input type="text"  placeholder="Type here"/>
+          </div>
+        </div>
         <Outlet></Outlet>
       </div>
     </div>
