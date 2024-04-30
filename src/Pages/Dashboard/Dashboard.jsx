@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { FaUser, FaHome, FaComment } from "react-icons/fa";
 import { AiFillNotification } from "react-icons/ai";
-import { FaImages, FaMagnifyingGlass } from "react-icons/fa6";
+import { FaImages, FaMagnifyingGlass, FaRegBell, FaRegMessage } from "react-icons/fa6";
 import { MdHomeWork } from "react-icons/md";
 import { IconContext } from "react-icons";
 import arrow from "../../assets/arrow.png";
+import { FormControlLabel, Switch } from "@mui/material";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(true);
@@ -176,10 +177,19 @@ const Dashboard = () => {
           isAdmin ? "" : ""
         }`}
       >
-        <div className="p-5 shadow">
+        <div className="p-5 shadow flex justify-between items-center">
           <div className="flex gap-3 items-center">
-            <FaMagnifyingGlass/>
-            <input type="text"  placeholder="Type here"/>
+            <FaMagnifyingGlass />
+            <input type="text" placeholder="Type here" />
+          </div>
+          <div>
+            <FormControlLabel
+              control={<Switch defaultChecked />}
+            />
+            <div>
+              <FaRegBell/>
+              <FaRegMessage />
+            </div>
           </div>
         </div>
         <Outlet></Outlet>
