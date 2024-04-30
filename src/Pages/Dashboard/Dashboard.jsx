@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { FaUser, FaHome, FaComment } from "react-icons/fa";
+import { FaUser, FaHome, FaComment, FaAngleDown } from "react-icons/fa";
 import { AiFillNotification } from "react-icons/ai";
-import { FaImages, FaMagnifyingGlass, FaRegBell, FaRegMessage } from "react-icons/fa6";
+import {
+  FaImages,
+  FaMagnifyingGlass,
+  FaRegBell,
+  FaRegMessage,
+} from "react-icons/fa6";
 import { MdHomeWork } from "react-icons/md";
 import { IconContext } from "react-icons";
 import arrow from "../../assets/arrow.png";
-import { FormControlLabel, Switch } from "@mui/material";
+import { Avatar, FormControlLabel, Switch } from "@mui/material";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(true);
@@ -182,13 +187,21 @@ const Dashboard = () => {
             <FaMagnifyingGlass />
             <input type="text" placeholder="Type here" />
           </div>
-          <div>
-            <FormControlLabel
-              control={<Switch defaultChecked />}
-            />
-            <div>
-              <FaRegBell/>
-              <FaRegMessage />
+          <div className="flex items-center gap-5">
+            <FormControlLabel control={<Switch defaultChecked />} />
+            <FaRegBell className="link hover:scale-150 duration-500"/>
+            <FaRegMessage className="mx-5 link hover:scale-150 duration-500"/>
+            <div className="flex items-center gap-4 link no-underline">
+              <div className="text-end">
+                <h1 className="font-semibold text-sm">Hasibur Rahman</h1>
+                <p className="text-xs">Web Developer</p>
+              </div>
+              <Avatar
+                alt="Akash"
+                src="https://i.ibb.co/10p5JRc/1704294431371.jpg"
+                sx={{ width: 40, height: 40 }}
+              />
+              <FaAngleDown/>
             </div>
           </div>
         </div>
