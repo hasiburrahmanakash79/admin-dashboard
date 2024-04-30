@@ -44,8 +44,8 @@ const Dashboard = () => {
 
   const Menus = [
     {
-      title: "Admin Home",
-      path: "/dashboard/adminHome",
+      title: "Dashboard",
+      path: "/",
       icon: iconMappings.RoleHome,
       role: "admin",
       gap: true,
@@ -93,7 +93,7 @@ const Dashboard = () => {
       <div
         className={` ${
           open ? "w-56 p-4" : "w-14 text-center"
-        }   h-screen text-black fixed left-0 top-0 bottom-0 bg-blue-200 z-50 pt-8  duration-500 transition-all`}
+        }   h-screen text-white fixed left-0 top-0 bottom-0 bg-gray-900 z-50 pt-8  duration-500 transition-all`}
       >
         <img
           src={arrow}
@@ -111,7 +111,7 @@ const Dashboard = () => {
                 <Link
                   to={Menu.path}
                   key={index}
-                  className={`flex rounded-md p-2 cursor-pointer hover: hover:bg-blue-400 hover:text-black text-sm items-center gap-x-4 ${
+                  className={`flex rounded-md p-2 cursor-pointer hover: hover:bg-slate-800 text-sm items-center gap-x-4 ${
                     Menu.gap ? "mt-9" : "mt-2"
                   } ${index === 0 && " hover:bg-blue-400"}`}
                 >
@@ -156,7 +156,7 @@ const Dashboard = () => {
             <Link
               to={Menu.path}
               key={index}
-              className={`flex rounded-md p-2 cursor-pointer hover: hover:bg-blue-400  hover:text-black  text-sm items-center gap-x-4 ${
+              className={`flex rounded-md p-2 cursor-pointer hover: hover:bg-slate-800  text-sm items-center gap-x-4 ${
                 Menu.gap ? "mt-9" : "mt-2"
               } ${index === 0 && " hover:bg-primary"}`}
             >
@@ -205,7 +205,9 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+        <div className="bg-slate-100 h-full p-7">
         <Outlet></Outlet>
+        </div>
       </div>
     </div>
   );
