@@ -191,7 +191,7 @@ const Dashboard = () => {
             <FormControlLabel control={<Switch defaultChecked />} />
             <FaRegBell className="link hover:scale-150 duration-500"/>
             <FaRegMessage className="mx-5 link hover:scale-150 duration-500"/>
-            <div className="flex items-center gap-4 link no-underline">
+            <Link to='/dashboard/profile' className="flex items-center gap-4 link no-underline">
               <div className="text-end">
                 <h1 className="font-semibold text-sm">Hasibur Rahman</h1>
                 <p className="text-xs">Web Developer</p>
@@ -202,7 +202,7 @@ const Dashboard = () => {
                 sx={{ width: 40, height: 40 }}
               />
               <FaAngleDown/>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="bg-slate-100 h-full p-7">
