@@ -8,12 +8,15 @@ const Profile = () => {
           <div className="absolute bottom-1 right-1 z-10 ">
             <label
               htmlFor=""
-              className="flex cursor-pointer items-center justify-center gap-2 rounded bg-black px-2 py-1 text-sm font-medium text-white hover:bg-opacity-80 xsm:px-4"
+              className="flex cursor-pointer items-center justify-center gap-2 rounded px-2 py-1 text-sm font-medium text-white hover:bg-opacity-80 xsm:px-4"
             >
               <input type="file" id="cover" name="cover" className=""></input>
             </label>
           </div>
         </div>
+
+        <div>Name</div>
+        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos minima nemo odit ipsum vitae, at perspiciatis placeat veritatis doloremque quod nobis, ad quidem. Enim, asperiores? Error corrupti nemo vel.</p></div>
       </div>
     </div>
   );
